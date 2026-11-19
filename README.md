@@ -32,7 +32,7 @@ The repository preserves original REPRO-relative paths for migrated material. Fo
 | `archive/` | Superseded explorations, historical run data, audits, and patches retained for context |
 | `scripts/archive/` | Superseded one-off scripts retained for provenance |
 | `recovery-inventory-*/` | Historical branch and commit recovery inventories |
-| `hypatiax/experiments/benchmarks/core295_*`, `scripts/core295_*`, `config/core295_catalogue.json` | Standalone Core-295 research track (catalogue discovery/review, planning, and fail-closed shard tooling); not part of the canonical experiment launcher. |
+| `hypatiax/experiments/benchmarks/core295_*`, `scripts/core295_*`, `config/core295_catalogue.json` | Core-295 research tooling (catalogue discovery/review, planning, and fail-closed shard tooling); not part of the canonical experiment launcher. Runtime dependencies remain in canonical REPRO; this workspace is not a self-contained execution environment. |
 
 `REPRO_TRANSFER_MANIFEST.tsv` records every migrated path, its source Git blob SHA, and the reason for separation.
 
