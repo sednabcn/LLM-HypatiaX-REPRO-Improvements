@@ -8,8 +8,9 @@ The canonical reproducibility code, experiment definitions, workers, benchmark e
 
 - Exploratory research and technical investigations.
 - Standalone prototypes and alternative implementations.
-- Analysis and visualizations that do not define or alter reproducible pipeline results.
-- Design proposals and documentation for substantial future changes.
+- Analysis, historical run outputs, and visualizations that do not define canonical pipeline results.
+- Design proposals, post-run investigations, and documentation for substantial future changes.
+- Superseded one-off repair scripts, patches, and recovery inventories retained for provenance.
 - Improvements being evaluated before deliberate promotion into REPRO.
 
 ## What does not belong here
@@ -20,15 +21,21 @@ The canonical reproducibility code, experiment definitions, workers, benchmark e
 
 ## Repository layout
 
+The repository preserves original REPRO-relative paths for migrated material. For example, historical files formerly under `archive/`, `scripts/archive/`, `docs/`, and `recovery-inventory-*/` remain under those same paths here. This makes provenance and cross-reference straightforward while keeping them out of the active pipeline checkout.
+
 | Path | Purpose |
 | --- | --- |
 | `research/` | Literature notes, technical investigations, and analysis |
 | `prototypes/` | Isolated proof-of-concept implementations |
 | `design/` | Architecture proposals and promotion plans |
-| `docs/` | Cross-cutting documentation and decision records |
-| `archive/` | Superseded explorations retained for context |
+| `docs/` | Cross-cutting documentation and decision records; mirrored historical docs retain their original paths |
+| `archive/` | Superseded explorations, historical run data, audits, and patches retained for context |
+| `scripts/archive/` | Superseded one-off scripts retained for provenance |
+| `recovery-inventory-*/` | Historical branch and commit recovery inventories |
 
-Each project should document its purpose, status, assumptions, dependencies, inspection or execution steps, limitations, and promotion intent.
+`REPRO_TRANSFER_MANIFEST.tsv` records every migrated path, its source Git blob SHA, and the reason for separation.
+
+Each new project should document its purpose, status, assumptions, dependencies, inspection or execution steps, limitations, and promotion intent.
 
 ## Promotion into REPRO
 
